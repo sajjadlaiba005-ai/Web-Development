@@ -1,63 +1,113 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #2b2b2b;
-}
-.top-section {
-    background: white;
-    padding: 60px;
-    position: relative;
 }
 
-.heard {
-    font-size: 12px;
-    color: gray;
+body {
+    background: #FFF1DA;
+    color: #333;
 }
 
-.contact-title {
-    font-size: 40px;
-    margin-top: 10px;
-    display: inline-block;
-    border-bottom: 3px solid yellow;
-    padding-bottom: 5px;
-}
-
-.arrow {
-    position: absolute;
-    right: 50px;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    background: yellow;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 18px;
-}
-
-.bottom-section {
-    background: black;
-    color: white;
-    padding: 50px;
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 20px 80px;
 }
 
-.column {
-    width: 22%;
-    font-size: 14px;
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
 }
 
-
-.column a {
-    color: white;
-    font-size: 12px;
-    text-decoration: underline;
+.btn-outline {
+    border: 1px solid #333;
+    padding: 6px 14px;
+    border-radius: 5px;
 }
 
-.icons i {
-    font-size: 18px;
-    margin-right: 12px;
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+#small
+{
+    color: #DF6951;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.hero-text p {
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.btn {
+    background: orange;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    border-radius: 25px;
     cursor: pointer;
 }
+
+.play {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-circle {
+    width: 45px;
+    height: 45px;
+    background: tomato;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+    padding: 60px;
+}
+
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 25px;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+}
+
+.card.active {
+    background: #fff;
+    transform: scale(1.05);
+}
+
