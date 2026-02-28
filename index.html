@@ -1,46 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TASK 6</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Practice</title>
 </head>
 <body>
 
-    <div class="main-content">
-      <div class="header">
-        <p>Rule The Exchange</p>
-      </div>
+    <h1>JavaScript Practice File</h1>
+    <p>Open Console to see results</p>
 
-      <div class="card">
-        <div class="card1">
-          
-            <h3>Knowledge Base</h3>
-            <p>Sharpen uo your tragedy know-how<br>
-            with our comprehensive knowledge<br>
-            Base containing helpful tutorials</p>
-        </div>
 
-        <div class="card2">
-         
-            <h3>24/7 Support</h3>
-            <p>We are here for you whenever you need<br>
-            us with 24/7 support via both <br>
-            live chat and help desk</p>
-        </div>
-      </div>
+// Difference between var, let, const
 
-      <div class="content">
-        <h1>You'll wonder how you ever<br>
-            lived without us
-        </h1>
-      </div>
+var oldVariable = "I am var";
+let changeableValue = 10;
+const fixedValue = 3.14;
 
-      <div >
-        <button class="button">Get started for free</button>
-      </div>
-    </div>
-    
+console.log(oldVariable);
+console.log(changeableValue);
+console.log(fixedValue);
+
+// Changing let value
+changeableValue = 20;
+console.log("Updated let value:", changeableValue);
+
+// Uncommenting below line will give error
+// fixedValue = 5;
+
+
+// ===============================
+// 2️⃣ Data Types Practice
+// ===============================
+
+// String
+let studentName = "Laiba";
+console.log("Name:", studentName);
+console.log("Type:", typeof studentName);
+
+// Number
+let age = 21;
+let price = 99.99;
+console.log("Age:", age);
+console.log("Price:", price);
+console.log("Type of age:", typeof age);
+
+// Boolean
+let isStudent = true;
+console.log("Is Student:", isStudent);
+console.log("Type:", typeof isStudent);
+
+// Undefined
+let city;
+console.log("City:", city);
+console.log("Type:", typeof city);
+
+// Null
+let result = null;
+console.log("Result:", result);
+console.log("Type:", typeof result);
+
+
+// ===============================
+// 3️⃣ User Input Practice
+// ===============================
+
+// Taking name input
+let userName = prompt("Enter your name:");
+console.log("Welcome " + userName);
+
+// Taking number input
+let num1 = prompt("Enter first number:");
+let num2 = prompt("Enter second number:");
+
+// Converting string to number
+num1 = Number(num1);
+num2 = Number(num2);
+
+let sum = num1 + num2;
+
+console.log("Sum is:", sum);
+
+
+// ===============================
+// Extra Practice Questions
+// ===============================
+
+// 1. Check even or odd number
+let number = Number(prompt("Enter a number to check even or odd:"));
+
+if (number % 2 === 0) {
+    console.log("Even Number");
+} else {
+    console.log("Odd Number");
+}
+
+// 2. Boolean condition practice
+let marks = Number(prompt("Enter your marks:"));
+
+if (marks >= 50) {
+    console.log("You Passed ✅");
+} else {
+    console.log("You Failed ❌");
+}
+
+    <script src="practice.js"></script>
 </body>
 </html>
