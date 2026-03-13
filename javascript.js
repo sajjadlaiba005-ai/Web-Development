@@ -1,161 +1,207 @@
-// ===============================
-// JavaScript Operators Practice
-// ===============================
 
-console.log("----- Arithmetic Operators -----");
 
-// Addition
-let price = 100;
-let tax = 20;
-let total = price + tax;
-console.log("Total Price:", total);
+// 1. Total price of items in an e-commerce cart //
 
-// Multiplication
-let itemPrice = 500;
-let quantity = 2;
-let totalPrice = itemPrice * quantity;
-console.log("Total Shopping Price:", totalPrice);
 
-// Remainder
-let remainder = 10 % 3;
-console.log("Remainder of 10 % 3:", remainder);
+let item1 = 500;
+let item2 = 300;
+let item3 = 200;
+
+let totalPrice = item1 + item2 + item3;
+console.log("Total Price:", totalPrice);
 
 
 
-console.log("\n----- Assignment Operators -----");
+// 2. Discounted price with 10% coupon//
 
-let score = 50;
-score += 10;
-console.log("Score after += 10:", score);
 
-let balance = 1000;
-balance += 500;
-balance -= 200;
-console.log("Final Balance:", balance);
+let price = 1000;
+let discount = price * 0.10;
+let finalPrice = price - discount;
+
+console.log("Price after 10% discount:", finalPrice);
 
 
 
-console.log("\n----- Comparison Operators -----");
-
-console.log("10 == '10':", 10 == "10");
-console.log("10 === '10':", 10 === "10");
-console.log("5 != 3:", 5 != 3);
-console.log("5 > 3:", 5 > 3);
-console.log("5 < 3:", 5 < 3);
+// 3. Total bill including 18% tax//
 
 
+let bill = 2000;
+let tax = bill * 0.18;
+let totalBill = bill + tax;
 
-console.log("\n----- Logical Operators -----");
+console.log("Total bill with tax:", totalBill);
 
-// AND example
+
+
+// 4. BMI Calculator//
+
+
+let weight = 70;   // kg
+let height = 1.75; // meters
+
+let bmi = weight / (height * height);
+
+console.log("BMI:", bmi);
+
+
+
+// 5. Monthly salary after tax deduction//
+
+
+let salary = 50000;
+let salaryTax = salary * 0.10;
+let finalSalary = salary - salaryTax;
+
+console.log("Salary after tax:", finalSalary);
+
+
+
+// 6. Average rating from 5 users//
+
+
+let r1 = 4;
+let r2 = 5;
+let r3 = 3;
+let r4 = 4;
+let r5 = 5;
+
+let averageRating = (r1 + r2 + r3 + r4 + r5) / 5;
+
+console.log("Average Rating:", averageRating);
+
+
+
+// 7. Delivery charge calculator//
+
+
+let orderAmount = 400;
+let deliveryCharge;
+
+if (orderAmount < 500) {
+    deliveryCharge = 100;
+} else {
+    deliveryCharge = 0;
+}
+
+console.log("Delivery Charge:", deliveryCharge);
+
+
+
+// 8. Simple Interest Calculator //
+
+
+let principal = 10000;
+let rate = 5;
+let time = 2;
+
+let simpleInterest = (principal * rate * time) / 100;
+
+console.log("Simple Interest:", simpleInterest);
+
+
+
+// 9. Remaining balance after withdrawa //
+
+
+let balance = 10000;
+let withdraw = 2500;
+
+let remainingBalance = balance - withdraw;
+
+console.log("Remaining Balance:", remainingBalance);
+
+
+
+// 10. Minutes to hours converter //
+
+let minutes = 130;
+
+let hours = Math.floor(minutes / 60);
+let remainingMinutes = minutes % 60;
+
+console.log(hours + " hours " + remainingMinutes + " minutes");
+
+
+
+// IF-ELSE STATEMENTS (Decision Making) //
+
+
+
+
+// 1. Login system //
+
+
 let username = "admin";
-let password = "123";
+let password = "1234";
 
-if (username === "admin" && password === "123") {
-  console.log("Login Successful");
-}
-
-// OR example
-let isStudent = true;
-let isMember = false;
-
-if (isStudent || isMember) {
-  console.log("Discount Available");
-}
-
-// NOT example
-let isLoggedIn = false;
-console.log("User logged in:", !isLoggedIn);
-
-
-
-console.log("\n----- Unary Operators -----");
-
-let count = 5;
-count++;
-console.log("Count after increment:", count);
-
-let lives = 3;
-lives--;
-console.log("Lives left:", lives);
-
-
-
-console.log("\n----- Ternary Operator -----");
-
-let age = 18;
-let result = age >= 18 ? "Adult" : "Minor";
-console.log("Age Check:", result);
-
-let amount = 1200;
-let discount = amount > 1000 ? "10% Discount" : "No Discount";
-console.log("Shopping Discount:", discount);
-
-
-
-console.log("\n----- IF Statement -----");
-
-let votingAge = 20;
-
-if (votingAge >= 18) {
-  console.log("You can vote");
-}
-
-
-
-console.log("\n----- IF ELSE Statement -----");
-
-let marks = 40;
-
-if (marks >= 50) {
-  console.log("Pass");
+if (username === "admin" && password === "1234") {
+    console.log("Login Successful");
 } else {
-  console.log("Fail");
+    console.log("Invalid Username or Password");
 }
 
 
 
-console.log("\n----- ELSE IF Statement -----");
+// 2. Age restriction check //
 
-let examMarks = 75;
 
-if (examMarks >= 90) {
-  console.log("Grade A");
-} else if (examMarks >= 70) {
-  console.log("Grade B");
-} else if (examMarks >= 50) {
-  console.log("Grade C");
+let age = 16;
+
+if (age >= 18) {
+    console.log("Access Granted");
 } else {
-  console.log("Fail");
+    console.log("Access Denied - Under 18");
 }
 
 
 
-console.log("\n----- SWITCH Statement -----");
+// 3. Discount system //
 
-let day = 3;
 
-switch (day) {
-  case 1:
-    console.log("Monday");
-    break;
+let order = 250;
+let orderDiscount = 0;
 
-  case 2:
-    console.log("Tuesday");
-    break;
+if (order > 200) {
+    orderDiscount = order * 0.20;
+} else if (order > 100) {
+    orderDiscount = order * 0.10;
+}
 
-  case 3:
-    console.log("Wednesday");
-    break;
+let finalAmount = order - orderDiscount;
 
-  case 4:
-    console.log("Thursday");
-    break;
+console.log("Final Order Price:", finalAmount);
 
-  case 5:
-    console.log("Friday");
-    break;
 
-  default:
-    console.log("Weekend");
+
+// 4. Student grade checker //
+
+
+let marks = 75;
+
+if (marks >= 80) {
+    console.log("Grade A");
+} else if (marks >= 60) {
+    console.log("Grade B");
+} else if (marks >= 40) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+
+
+// 5. Weather advisory system //
+
+
+let weather = "rainy";
+
+if (weather === "hot") {
+    console.log("Drink more water");
+} else if (weather === "cold") {
+    console.log("Wear warm clothes");
+} else if (weather === "rainy") {
+    console.log("Carry an umbrella");
+} else {
+    console.log("Weather normal");
 }
